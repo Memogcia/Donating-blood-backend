@@ -1,11 +1,12 @@
-const express       = require('express'), 
-    app             = express(),
-    cors            = require('cors'),
-    bodyParser      = require('body-parser'),
-    compression     = require('compression'),
-    logger          = require('morgan'),
-    mongoose        = require('mongoose'),
-    CONFIG          = require('./config/config');
+const express           = require('express'), 
+    app                 = express(),
+    cors                = require('cors'),
+    bodyParser          = require('body-parser'),
+    compression         = require('compression'),
+    logger              = require('morgan'),
+    mongoose            = require('mongoose'),
+    expressValidator    = require('express-validator')
+    CONFIG              = require('./config/config');
 
 mongoose.connect('mongodb://' + CONFIG.db_user + ':' + CONFIG.db_password + '@' + CONFIG.db_host + ':' + CONFIG.db_port + '/' + CONFIG.db_name);
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,6 +14,7 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
 app.use(compression());
+app.use(expressValidator())
 
 require('./routes')(app);
 

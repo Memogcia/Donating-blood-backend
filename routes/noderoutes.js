@@ -1,35 +1,11 @@
-const User = require('../models/Users');
+const userController = require('../controllers/user');
 
 module.exports = function(app){
     app.get('/', (req, res) =>{
         res.send('bye');    
     })
 
-    app.get('/register', (req, res) =>{
-        var user = new User({
-            first_name: 'Guillermo',
-            last_name: 'García',
-            email: 'correopatata@patata.com',
-            password: '0',
-            birthdate: new Date(),
-            address: 'Address',
-            gender: false,
-            bloodType: 1,
-            city: 'coty',
-            country: 'country',
-            telephone: 3331066215,
-            cellphone: 3331066215,
-            created: new Date(),
-            updated: new Date(),
-            avatar: 'patatat',
-            prevDonations: []
-        });
-
-        user.save(function(err){
-            console.log(err)
-        })
-        res.send('hello');
-    });
+    app.post('/register', userController.validate('createUser'), userController.createUser);
 
     app.get('/deletePatient', () => {
         res.send('bye');
