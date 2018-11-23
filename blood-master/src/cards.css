@@ -1,0 +1,58 @@
+
+.column p {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.brand {
+  min-height: 3rem;
+  background: #212;
+}
+
+.brand-title, .brand-title:hover, .brand-title:focus {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  margin-left: 0.6rem;
+  text-transform: uppercase;
+}
+
+.img1 {
+  background: url('https://static.vix.com/es/sites/default/files/styles/large/public/btg/curiosidades.batanga.com/files/Componentes-de-la-sangre-01.jpg?itok=l0Mwb_7e');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img2 {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT-YauSzUjlJUcjD9tLddJJyDuCskPFPCj7Kaiia7H495xNl48');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img3 {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG6E2kdDW6tUkMuyIJTrYehk8CENSW5XgzYo1OVN54sei50YBf');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img4 {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdT55Yku6h8Vn_ba6b0UrvJvadcIOHGEoppUu8njGIuIx4aAzw');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img5 {
+  background: url('https://images.unsplash.com/photo-1431492299426-2ea1ce429cc0?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
